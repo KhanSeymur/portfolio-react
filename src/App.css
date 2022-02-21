@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  /* font-size: 10px; */
+  /* 10px/16px=0.625=62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
 :root {
   --primary-white: #fff;
   --primary-light-grey: #f4f4f4;
   --primary-grey: #ccd1d9;
   --primary-dark-grey: #666;
-  --primary-dark-orange: #f9ab00;
+  --primary-orange: #f9ab00;
   --primary-dark: rgb(52, 58, 64);
   --primary-red: #ef4035;
   --primary-hover-red: #f33501;
@@ -12,8 +25,22 @@
   --primary-green: rgb(0, 255, 0);
 }
 
+body{
+  font-family: 'Montserrat', sans-serif !important;
+  line-height: 1;
+  font-weight: 400;
+}
+
+
 .logo {
-  width: 14rem;
+  width: 22rem;
+}
+
+nav{
+  z-index: 9999;
+}
+a.navbar-brand{
+  padding: 1rem;
 }
 
 a.nav-link {
@@ -22,9 +49,93 @@ a.nav-link {
 
 nav ul li {
   text-transform: uppercase;
+  margin-right:0.5rem;
 }
+nav ul li:last-child{
+  margin-right:2rem;
+}
+li.nav-item{
+  width: fit-content;
+  block-size: fit-content;
+
+
+}
+span.navbar-toggler-icon{
+  font-size: 2rem;
+  color: var(--primary-white) !important;
+}
+
+
+a.nav-link{  
+  padding:1rem !important;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.5s linear;
+}
+
+
 
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus {
-  border-top: 0.1875rem solid var(--primary-dark-orange);
+  border-bottom: 0.3rem solid var(--primary-dark-orange);
+}
+
+
+/* Header css codes */
+
+
+.header-wrapper{
+  background: url("wall-and-laptop-background.jpg")no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.main-info{
+  position: absolute;
+ top:-200px;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.main-info h1{
+  color: var(--primary-orange);
+  margin-bottom: 25px;
+  font-size: 4rem;
+}
+.typed-text{
+  color: var(--primary-white);
+  font-size: 3.2rem;
+}
+
+@media(max-width:768px){
+  .main-info h1{
+    font-size: 3rem;
+  }
+  .typed-text{
+    font-size: 2rem;
+  }
+}
+
+
+.downloadcv{
+  border:1px solid var(--primary-red);
+  padding: 1rem;
+  margin: 2rem;
+  text-transform: uppercase;
+  color: var(--primary-white);
+  border-radius: 0.4rem;
+  transition:all 0.8s linear;
+}
+.downloadcv:hover{
+  text-decoration: none;
+  background: var(--primary-hover-red);
+  color:var(--primary-white);
 }

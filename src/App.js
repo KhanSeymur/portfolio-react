@@ -6,10 +6,10 @@ import Header from './components/Header'
 
 function App() {
   return (
-    
+    // React fragment
     <>
     <Navbar/>
-    {/* <Header/> */}
+    <Header/>
     </>
   );
 }

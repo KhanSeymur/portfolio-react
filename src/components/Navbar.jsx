@@ -1,14 +1,8 @@
 import itBrainslogo from "../logo.png"
-
-
-
-
-
-
-const Navbar = (_) => {
+const Navbar =_=> {
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <a className="navbar-brand" href="#"><img src={itBrainslogo} className="logo" /></a>
       <button
         className="navbar-toggler"
